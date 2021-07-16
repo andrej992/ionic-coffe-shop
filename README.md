@@ -5,7 +5,7 @@ In order to start it open Power Shell window and type:
 npm install 
 
 After installation type: 
-ionic serve
+ionic servee
 
 
 
