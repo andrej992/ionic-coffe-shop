@@ -22,6 +22,6 @@ ionic cordova build android #Android
 Now, you can use any of the command to run the application.
 ionic cordova run ios --device #iOS
 
-ionic cordova run android --device #Android
+ionic cordova run android --device #Androidd
 
 
