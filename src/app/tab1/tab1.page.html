@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            Menu
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <!-- List of Text Items -->
+    <ion-list>
+        <ion-item *ngFor="let item of items" (click)="showOptions(item)">
+            <ion-thumbnail slot="start">
+                <img src="{{item.picture}}">
+            </ion-thumbnail>
+            <ion-label>
+                <h2>{{item.title}}</h2>
+                <h3>{{item.price | currency}}</h3>
+                <p *ngIf="item.extraInfo">{{item.extraInfo}}</p>
+            </ion-label>
+        </ion-item>
+
+    </ion-list>
+
+</ion-content>

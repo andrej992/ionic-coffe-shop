@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Address</ion-title>
+    <ion-button fill="clear" slot="end" (click)="closeModal()">Close</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-item>
+    <ion-label position="stacked">Address</ion-label>
+    <ion-input placeholder="Address" [(ngModel)]="addressInfo.address"></ion-input>
+    <ion-input placeholder="City" [(ngModel)]="addressInfo.city"></ion-input>
+    <ion-input placeholder="Zip Code" [(ngModel)]="addressInfo.zip"></ion-input>
+    <ion-button class="ion-margin" (click)="getLocation()">
+      <ion-icon name="locate"></ion-icon>
+      Use Current Location
+    </ion-button>
+  </ion-item>
+
+  <ion-button size="full" (click)="storeAddress()">Store</ion-button>
+
+</ion-content>

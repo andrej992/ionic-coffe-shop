@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            My Orders
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+
+        <ion-card *ngIf="!myItems || myItems.length == 0">
+            <ion-card-content class="ion-text-center">
+                You dont have any orders yet!
+            </ion-card-content>
+        </ion-card>
+
+        <div *ngFor="let item of myItems">
+            <ion-item>
+                <ion-thumbnail slot="start">
+                    <img src="{{item.picture}}">
+                </ion-thumbnail>
+                <ion-label>
+                    <h2>{{item.title}}</h2>
+                    <h3>{{item.price*item.quantity | currency}}</h3>
+                    <p *ngIf="item.extraInfo">{{item.extraInfo}}</p>
+                </ion-label>
+                <ion-badge *ngIf="item.quantity > 1" slot="end">
+                    x{{item.quantity}}
+                </ion-badge>
+            </ion-item>
+            <div class="ion-text-center" style="border-bottom: 1px solid #ccc">
+                <ion-row>
+                    <ion-col>
+                        <ion-button (click)="sendPayment(item)">Send Payment</ion-button>
+                    </ion-col>
+                    <ion-col>
+                        <ion-button color="danger" (click)="dismissItem(item)">Cancel</ion-button>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </div>
+
+    </ion-list>
+</ion-content>

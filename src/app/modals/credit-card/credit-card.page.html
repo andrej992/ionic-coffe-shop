@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Credit Card</ion-title>
+        <ion-button fill="clear" slot="end" (click)="closeModal()">Close</ion-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-fab *ngIf="showEdit" (click)="showCcInfo()" vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button>
+            <ion-icon name="finger-print"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+    <ion-item>
+        <ion-label position="stacked">Credit Card Info</ion-label>
+        <ion-input placeholder="Name" [(ngModel)]="cardInfo.CardName" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-input placeholder="Card Number" [(ngModel)]="cardInfo.CardNo" [attr.maxlength]="16"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-input placeholder="Expiration Month" [(ngModel)]="cardInfo.ExpMonth" [attr.maxlength]="2"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-input placeholder="Expiration Year" [(ngModel)]="cardInfo.ExpYear"  [attr.maxlength]="2"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-input placeholder="CVC Code" [(ngModel)]="cardInfo.CVC" [attr.maxlength]="3"></ion-input>
+    </ion-item>
+
+
+    <ion-button size="full" (click)="storeCCInfo()">Store</ion-button>
+
+</ion-content>

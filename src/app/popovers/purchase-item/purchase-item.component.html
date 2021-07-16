@@ -1,0 +1,40 @@
+<ion-content>
+
+    <ion-card-title class="ion-padding ion-text-center ion-text-wrap">
+        How many {{item.title}}s you need?
+    </ion-card-title>
+
+    <div class="ion-padding-horizontal ion-text-center">
+        Total: {{quantity * item.price | currency}}
+    </div>
+
+    <ion-list>
+
+        <ion-radio-group [(ngModel)]="type">
+            <ion-item>
+                <ion-label>Delivery</ion-label>
+                <ion-radio slot="start" value="0" ></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Pick-up</ion-label>
+                <ion-radio slot="start" value="1"></ion-radio>
+            </ion-item>
+        </ion-radio-group>
+
+        <ion-item>
+            1 <ion-range [(ngModel)]="quantity" snaps="true" min="1" max="10" pin="true"></ion-range> 10
+        </ion-item>
+    </ion-list>
+    <ion-row>
+        <ion-col>
+            <ion-button size="full" (click)="purchaseItem()">
+                Buy
+            </ion-button>
+        </ion-col>
+        <ion-col>
+            <ion-button size="full" color="danger" (click)="dismissPopover()">Cancel</ion-button>
+        </ion-col>
+    </ion-row>
+
+</ion-content>
