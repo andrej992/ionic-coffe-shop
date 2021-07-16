@@ -7,6 +7,9 @@ npm install
 After installation type: 
 ionic serve
 
+
+
+
 For starting it on Android or IOS device you should install Android studio and type the following commands:
 
 You have to add the platform:
