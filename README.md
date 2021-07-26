@@ -1,7 +1,7 @@
-Multi platform Application for ordering coffee
+# Multi platform Application for ordering coffee
 
 
-In order to start it open Power Shell window and type: 
+**1. In order to start it open Power Shell window and type:** 
 
 npm install 
 
