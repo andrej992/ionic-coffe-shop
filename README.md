@@ -1,30 +1,42 @@
 # Multi platform Application for ordering coffee
 
 
-**1. In order to start it open Power Shell window and type:** 
+**1. Requirements**
 
+1. Node.js
+2. Ionic
+3. Capacitor
+
+
+**2. In order to start it open Power Shell window and type:**
+```bash
 npm install 
-
-**2. After installation type:** 
-
-ionic serve
-
-**3. For starting it on Android or IOS device you should install Android studio and type the following commands:** 
-
-```bash
-ionic cordova platform add ios # FOR iOS
-
-ionic cordova platform add android  # FOR Android
 ```
 
+**3.After installation in order to start the application on Browser type:** 
 ```bash
-ionic cordova build ios  # FOR iOS
-
-ionic cordova build android # FOR Android
+npm start 
 ```
 
-```bash
-ionic cordova run ios --device # FOR iOS
+**4. For starting it on Android or IOS device you should install Android studio and type the following commands:**
 
-ionic cordova run android --device # FOR Android
+***1. You have to add the platform:***
+```bash
+ionic cordova platform add ios #iOS
+
+ionic cordova platform add android  #Android
+```
+
+***2. Use following command to create the build:***
+```bash
+ionic cordova build ios #iOS
+
+ionic cordova build android  #Android
+```
+
+***3. Now, you can use any of the command to run the application:***
+```bash
+ionic cordova run ios --device  #iOS
+
+ionic cordova run android --device  #Android
 ```
