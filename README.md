@@ -25,7 +25,7 @@ ionic cordova build android ----------> # FOR Android
 
 
 ionic cordova run ios --device ----------> # FOR iOS
-OR
+
 ionic cordova run android --device ----------> # FOR Android
 
 
