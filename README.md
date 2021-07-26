@@ -5,10 +5,10 @@
 
 1. Node.js
 2. Ionic
-3. Capacitor
+3. Cordova
 
 
-**2. In order to start it open Power Shell window and type:**
+**2. In order to install the required dependencies open Power Shell window and type:**
 ```bash
 npm install 
 ```
