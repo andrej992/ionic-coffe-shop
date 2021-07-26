@@ -13,7 +13,7 @@ For starting it on Android or IOS device you should install Android studio and t
 
 
 ionic cordova platform add ios ----------> # FOR iOS
-
+OR
 ionic cordova platform add android ----------> # FOR Android
 
 
